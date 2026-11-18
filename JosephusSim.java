@@ -65,8 +65,13 @@ private void add(String val) {
       
       
       // count to the elimination count
-      
+       for (int i = 0; i < eliminationCount - 1; i++) {
+         prev = prev.next;
+      }
+
       // print who will be eliminated
+      PersonNode victim = prev.next;
+      System.out.println(victim.name + "is eliminated ! ");
       
       // eliminate the person and update "front" of the circle and size
 
