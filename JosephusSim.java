@@ -74,7 +74,10 @@ private void add(String val) {
       System.out.println(victim.name + "is eliminated ! ");
       
       // eliminate the person and update "front" of the circle and size
-
+      
+      prev.next = victim.next;
+      front = victim.next;
+      size--;
    }
    
    public boolean isOver() {
