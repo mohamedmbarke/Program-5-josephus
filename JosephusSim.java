@@ -34,6 +34,12 @@ public class JosephusSim {
             last.next = front;
             }
          // generate, print, and save the random elimination count
+         
+            if (size >= 2) {
+            Random rand = new Random();
+            eliminationCount = rand.nextInt(size / 2) + 1;
+            System.out.println("Elimination count: " + eliminationCount);
+        }
 
       } catch (FileNotFoundException e) {
          System.out.println("Something went wrong with " + fileName);
