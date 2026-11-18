@@ -47,10 +47,23 @@ public class JosephusSim {
    }
    
    // optional helper method for constructing the circle
-   private void add(String val) {
+private void add(String val) {
+      front = new PersonNode(val, front);
+      size++;
    }
-   
+
    public void eliminate() {
+      if (size <= 1) {
+         return;
+      }
+
+      // find the last node in the circle (the node just before front)
+      PersonNode prev = front;
+      for (int i = 0; i < size - 1; i++) {
+         prev = prev.next;
+      }
+      
+      
       // count to the elimination count
       
       // print who will be eliminated
